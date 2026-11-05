@@ -62,7 +62,7 @@ def cidades_pais(countries):
 def media_avaliacao(countries):
     media_avaliacao = (
         df1[df1['country'].isin(countries)]
-        .groupby('country')['votes']
+        .groupby('country')['aggregate_rating']
         .mean()
         .reset_index(name='quantidade')
         .sort_values('quantidade', ascending=False)
