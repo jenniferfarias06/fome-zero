@@ -75,7 +75,11 @@ def media_avaliacao(countries):
         text='media_avaliacao',
         text_auto='.2f',
         title='Média de Avaliações por País',
-        color_discrete_sequence=['#C0392B']
+        color_discrete_sequence=['#C0392B'],
+        labels={
+    'country': 'País',
+    'media_avaliacao': 'Nota média'
+},
     )
 
     fig.update_traces(textposition='outside')
