@@ -99,8 +99,12 @@ def media_prato_p_2(countries):
         y='custo_medio',
         text='custo_medio',
         text_auto='.2f',
-        title='Média de Preço de um Prato para Duas Pessoas',
-        color_discrete_sequence=['#C0392B']
+        title='Custo Médio para Duas Pessoas por País',
+        color_discrete_sequence=['#C0392B'],
+        labels={
+    'country': 'País',
+    'custo_medio': 'Custo médio (moeda local)'
+},
     )
 
     fig.update_traces(textposition='outside')
