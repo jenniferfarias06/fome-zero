@@ -64,15 +64,15 @@ def media_avaliacao(countries):
         df1[df1['country'].isin(countries)]
         .groupby('country')['aggregate_rating']
         .mean()
-        .reset_index(name='quantidade')
-        .sort_values('quantidade', ascending=False)
+        .reset_index(name='media_avaliacao')
+        .sort_values('media_avaliacao', ascending=False)
     )
 
     fig = px.bar(
         media_avaliacao.head(6),
         x='country',
-        y='quantidade',
-        text='quantidade',
+        y='media_avaliacao',
+        text='media_avaliacao',
         text_auto='.2f',
         title='Média de Avaliações por País',
         color_discrete_sequence=['#C0392B']
@@ -89,15 +89,15 @@ def media_prato_p_2(countries):
         df1[df1['country'].isin(countries)]
         .groupby('country')['average_cost_for_two']
         .mean()
-        .reset_index(name='quantidade')
-        .sort_values('quantidade', ascending=False)
+        .reset_index(name='custo_medio')
+        .sort_values('custo_medio', ascending=False)
     )
 
     fig = px.bar(
         media_prato.head(6),
         x='country',
-        y='quantidade',
-        text='quantidade',
+        y='custo_medio',
+        text='custo_medio',
         text_auto='.2f',
         title='Média de Preço de um Prato para Duas Pessoas',
         color_discrete_sequence=['#C0392B']
