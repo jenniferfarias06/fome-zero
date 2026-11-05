@@ -36,6 +36,10 @@ def top_cidades(countries, top_n):
 
     fig.update_traces(textposition='outside')
     fig.update_layout(xaxis_tickangle=-45)
+    fig.update_xaxes(
+    categoryorder='array',
+    categoryarray=grouped_df.head(top_n)['city'].tolist()
+)
 
     return fig
 
@@ -79,6 +83,10 @@ def media_avaliacoes(countries, top_n, avaliacao):
 
     fig.update_traces(textposition='outside')
     fig.update_layout(xaxis_tickangle=-45)
+    fig.update_xaxes(
+    categoryorder='array',
+    categoryarray=grouped_df.head(top_n)['city'].tolist()
+)
 
     return fig
     
@@ -111,6 +119,10 @@ def tipos_culinarios(countries, top_n):
 
     fig.update_traces(textposition='outside')
     fig.update_layout(xaxis_tickangle=-45)
+    fig.update_xaxes(
+    categoryorder='array',
+    categoryarray=grouped_df.head(top_n)['city'].tolist()
+)
 
     return fig
 
